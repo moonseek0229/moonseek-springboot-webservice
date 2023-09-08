@@ -2,12 +2,16 @@ package first.moonseek.com.springboot.service.posts;
 
 import first.moonseek.com.springboot.domain.posts.PostRepository;
 import first.moonseek.com.springboot.domain.posts.Posts;
+import first.moonseek.com.springboot.web.dto.PostsListResponseDto;
 import first.moonseek.com.springboot.web.dto.PostsResponseDto;
 import first.moonseek.com.springboot.web.dto.PostsSaveRequestDto;
 import first.moonseek.com.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Service
@@ -34,6 +38,13 @@ public class PostService {
 
         return new PostsResponseDto(entity);
 
+    }
+
+    @Transactional(readOnly = true)
+    public List<PostsListResponseDto> findAllDesc(){
+        return postRepository.findAllDesc().stream()
+                .map(PostsListResponseDto::new)
+                .collect(Collectors.toList());
     }
 
 }

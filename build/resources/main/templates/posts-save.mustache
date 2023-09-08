@@ -1,0 +1,25 @@
+{{>layout/header}}
+
+<h1> Write Board </h1>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="title">TITLE</label>
+                <input type="text" class="form-control" id="title" placeholder="Please input Title">
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" class="form-control" id="author" placeholder="Please input Author">
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <input type="text" class="form-control" id="content" placeholder="Please input Content">
+            </div>
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">Cancel</a>
+        <button type="button" class="btn btn-primary" id="btn-save">Submit</button>
+    </div>
+</div>
+
+{{>layout/footer}}
