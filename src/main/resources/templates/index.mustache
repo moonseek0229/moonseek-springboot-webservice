@@ -2,9 +2,18 @@
 
 <h1>Get Started with Spring boot Ver.2</h1>
     <div class="col-md-12">
+    <!-- Login Area -->
         <div class="row">
             <div class="col-md-6">
                 <a href="/posts/save" role="button" class="btn btn-primary">Write</a>
+                {{#userName}}
+                    Logged in as : <Span id="user">{{userName}}</Span>
+                    <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+                {{/userName}}
+                {{^userName}}
+                    <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+                    <a href="/oauth2/authorization/naver" class="btn btn-secondary active" role="button">Naver Login</a>
+                {{/userName}}
             </div>
         </div>
     </div>
