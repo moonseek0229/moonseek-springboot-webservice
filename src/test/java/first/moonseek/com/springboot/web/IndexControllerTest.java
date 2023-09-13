@@ -24,7 +24,7 @@ public class IndexControllerTest {
         // when
         String body = this.restTemplate.getForObject("/", String.class);
         // then
-        assertThat(body).contains("Get Stared with Java Spring boot");
+        assertThat(body).contains("Get Started with Spring boot Ver.2");
     }
 
 }
