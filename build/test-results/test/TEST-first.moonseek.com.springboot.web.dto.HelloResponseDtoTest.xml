@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="first.moonseek.com.springboot.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-12T04:30:53" hostname="MacBook-Pro.local" time="0.032">
-  <properties/>
-  <testcase name="Lombok_Function_Test" classname="first.moonseek.com.springboot.web.dto.HelloResponseDtoTest" time="0.032"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
